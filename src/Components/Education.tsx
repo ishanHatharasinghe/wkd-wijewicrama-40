@@ -19,7 +19,7 @@ const educationData = [
   },
   {
     id: 3,
-    title: "Swarna Jayanthi Maha Vidyalaya", // Update with actual unique data
+    title: "Swarna Jayanthi Maha Vidyalaya",
     institution: "Kegalle",
     image: eduImage3
   }
@@ -27,36 +27,51 @@ const educationData = [
 
 const Education: React.FC = () => {
   return (
-    <section id="education" className="relative bg-[#1a1a1a] py-20 px-6">
+    <section
+      id="education"
+      className="relative bg-[#1a1a1a] py-12 px-4 sm:px-8 md:py-20 md:px-12"
+    >
       <div className="max-w-6xl mx-auto">
         {/* Section Heading */}
-        <h2 className="text-4xl md:text-5xl font-extrabold text-center text-white mb-16 uppercase tracking-wide">
+        <h2 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-center text-white mb-10 md:mb-16 uppercase tracking-wide">
           Education
         </h2>
 
         {/* Cards Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        {/* RESPONSIVE GRID:
+           1 col on mobile
+           2 cols on small tablets (sm)
+           3 cols on desktop (lg) 
+        */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
           {educationData.map((item) => (
             <div
               key={item.id}
-              className="group relative h-[500px] w-full overflow-hidden rounded-xl shadow-lg cursor-pointer"
+              // RESPONSIVE HEIGHTS:
+              // Mobile: h-[280px] (Compact)
+              // Tablet: h-[350px] (Mid-size)
+              // Desktop: h-[450px] (Large)
+              className="group relative h-[280px] sm:h-[350px] lg:h-[450px] w-full overflow-hidden rounded-xl shadow-lg cursor-pointer"
             >
               {/* Image */}
               <img
                 src={item.image}
                 alt={item.title}
-                className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-110"
+                className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-110"
               />
 
-              {/* Gradient Overlay for Text Readability */}
-              <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent opacity-80 transition-opacity duration-300"></div>
+              {/* Gradient Overlay - Made stronger at bottom for text readability */}
+              <div className="absolute inset-0 bg-gradient-to-t from-black/95 via-black/40 to-transparent opacity-90 transition-opacity duration-300"></div>
 
               {/* Text Content */}
-              <div className="absolute bottom-0 left-0 w-full p-6 text-center transform transition-transform duration-300 group-hover:-translate-y-2">
-                <h3 className="text-white font-bold text-lg leading-tight mb-1">
+              <div className="absolute bottom-0 left-0 w-full p-5 md:p-6 text-center transform transition-transform duration-300 group-hover:-translate-y-2">
+                {/* Title Scales with screen size */}
+                <h3 className="text-white font-bold text-base sm:text-lg lg:text-xl leading-tight mb-1">
                   {item.title}
                 </h3>
-                <p className="text-gray-300 text-sm font-medium">
+
+                {/* Institution Text */}
+                <p className="text-gray-300 text-xs sm:text-sm font-medium tracking-wide mt-2">
                   {item.institution}
                 </p>
               </div>

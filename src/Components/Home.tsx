@@ -44,7 +44,7 @@ const Home: React.FC = () => {
         <img
           src={personImage}
           alt="Person"
-          className="w-auto h-auto max-w-[240vw] max-h-[90vh] md:max-h-[85vh] object-contain 
+          className="w-auto h-auto max-w-[240vw] max-h-[82vh] md:max-h-[85vh] object-contain 
                transition-transform duration-500 group-hover:scale-[1.02] drop-shadow-2xl"
         />
       </div>

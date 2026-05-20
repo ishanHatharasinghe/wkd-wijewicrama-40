@@ -1,5 +1,6 @@
 import React from "react";
-import workImage from "../assets/BIA.jpg";
+import workImage from "../assets/Work/BIA.jpg";
+import WorkImage2 from "../assets/Work/sndchemicals_logo.jpg";
 
 const WorkExperience: React.FC = () => {
   return (
@@ -9,6 +10,50 @@ const WorkExperience: React.FC = () => {
         Work Experience
       </h2>
 
+      {/* S&D Chemicals Experience */}
+      <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 items-center mb-16">
+        {/* Left Column: Image */}
+        <div className="flex justify-center md:justify-start relative">
+          <img
+            src={WorkImage2}
+            alt="S&D Chemicals"
+            className="w-full max-w-sm md:max-w-md rounded-lg shadow-xl object-cover h-[250px] md:h-[500px]"
+          />
+        </div>
+
+        {/* Right Column: Text Content */}
+        <div className="text-center md:text-left">
+          <h2 className="text-2xl md:text-5xl font-extrabold text-black mb-2 uppercase leading-tight">
+            S & D Chemicals (Pvt) Ltd
+          </h2>
+          <h3 className="text-lg md:text-2xl font-bold text-gray-800 mb-6 uppercase">
+            Biyagama
+          </h3>
+
+          <div className="text-gray-700 leading-relaxed mb-8 text-sm md:text-base text-left">
+            <p className="font-semibold mb-4">
+              Now working as Maintenance Executive Engineer
+            </p>
+            <ul className="list-disc pl-5 space-y-2">
+              <li>Maintenance of manufacturing equipment and systems.</li>
+              <li>Troubleshooting and preventive maintenance programs.</li>
+              <li>Equipment optimization and performance monitoring.</li>
+              <li>Safety compliance and maintenance documentation.</li>
+            </ul>
+          </div>
+
+          <a
+             href="http://sdcheme.com/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-block px-8 py-3 rounded-full border-2 border-black font-bold text-black hover:bg-black hover:text-white transition-colors duration-300 uppercase tracking-wide text-xs md:text-sm"
+          >
+            Visit Site
+          </a>
+        </div>
+      </div>
+
+      {/* Airport and Aviation Services Experience */}
       <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 items-center">
         {/* Left Column: Image */}
         <div className="flex justify-center md:justify-start relative">

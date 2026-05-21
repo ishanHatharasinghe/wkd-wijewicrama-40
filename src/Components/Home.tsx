@@ -1,4 +1,3 @@
-import React from "react";
 import bgImage from "../assets/bg.jpg";
 import personImage from "../assets/main-man.png";
 
@@ -18,16 +17,17 @@ const Home: React.FC = () => {
       {/* LAYER 2 — Text with enhanced effects */}
       <div className="absolute inset-0 flex flex-col items-center justify-start text-center z-20 px-2 pt-2 md:pt-2">
         <p className="italic text-white text-lg  tracking-widest animate-fade-in opacity-0 animation-delay-300">
-          Assistant
+          Mechanical Engineer
         </p>
 
-        <h1 className="text-[3.5rem] md:text-[6rem] font-extrabold text-white leading-none tracking-tight animate-slide-up opacity-0 animation-delay-500">
+        <h1 className="text-[3.1rem] md:text-[6rem] font-extrabold text-white leading-none tracking-tight animate-slide-up opacity-0 animation-delay-500">
           <span className="inline-block hover:scale-105 transition-transform duration-300 ">
-            MECHANICAL
+            MAINTANANCE
+            
           </span>
           <br />
           <span className="inline-block hover:scale-105 transition-transform duration-300 ">
-            ENGINEER
+            EXECUTIVE
           </span>
         </h1>
       </div>
